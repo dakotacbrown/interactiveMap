@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/myresources">
+        <file alias="blank.jpg">images/bgMapBlank.jpg</file>
+        <file alias="btsu.jpg">images/bgMapBTSU.jpg</file>
+        <file alias="carillon.jpg">images/bgMapCarillon.jpg</file>
+        <file alias="founders.jpg">images/bgMapFounders.jpg</file>
+        <file alias="kreischer.jpg">images/bgMapKreischer.jpg</file>
+        <file alias="library.jpg">images/bgMapLibrary.jpg</file>
+        <file alias="oaks.jpg">images/bgMapOaks.jpg</file>
+        <file alias="offenhauer.jpg">images/bgMapOffenhauer.jpg</file>
+        <file alias="olscamp.jpg">images/bgMapOlscamp.jpg</file>
+    </qresource>
+</RCC>
