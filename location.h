@@ -12,7 +12,6 @@ class location : public QWidget{
 
 public:
     explicit location(QWidget *parent = 0);
-    explicit location(const char* title,  QWidget *parent = 0);
     ~location();
 
 private:

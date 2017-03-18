@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>location</string>
   </property>
-  <widget class="QDialogButtonBox" name="buttonBox">
+  <widget class="QDialogButtonBox" name="close">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -26,7 +26,7 @@
     <enum>Qt::Horizontal</enum>
    </property>
    <property name="standardButtons">
-    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Close</set>
+    <set>QDialogButtonBox::Close</set>
    </property>
   </widget>
  </widget>
