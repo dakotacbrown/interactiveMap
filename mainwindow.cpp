@@ -6,11 +6,37 @@
 #include <QRect>
 #include <QMouseEvent>
 
+    location *offen;
+    location *oaks;
+    location *btsu;
+    location *founders;
+    location *olscamp;
+    location *carillon;
+    location *library;
+    location *kreischer;
+
+    QRect offenRect = QRect(21, 55, 54, 85);
+    QRect oaksRect = QRect(40, 325, 125, 75);
+    QRect btsuRect = QRect(190, 430, 115, 205);
+    QRect foundersRect = QRect(25, 820, 158, 105);
+    QRect olscampRect = QRect(520, 430, 135, 120);
+    QRect carillonRect = QRect(575, 785, 95, 60);
+    QRect libraryRect = QRect(835, 610, 90, 95);
+    QRect kreischerRect = QRect(1225, 475, 230, 150);
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow){
 
     ui->setupUi(this);
+    offen = new location(this);
+    oaks = new location(this);
+    btsu = new location(this);
+    founders = new location(this);
+    olscamp = new location(this);
+    carillon = new location(this);
+    library = new location(this);
+    kreischer = new location(this);
 
     /**This block of code initializes the screen to be a fixed size. That way it cannont be moved.
     /  It loads the blank map image stored in resources and makes it the window background.
@@ -37,27 +63,12 @@ void MainWindow::resizeEvent(QResizeEvent *evt){
 }
 
 void MainWindow::mousePressEvent(QMouseEvent *event){
-    /*QPainter painter(this);
-    painter.setRenderHint(QPainter::Antialiasing);
-    painter.setPen(Qt::black);
-    painter.setOpacity(0);*/
-    QRect offenRect = QRect(21, 55, 54, 85);
-    QRect oaksRect = QRect(40, 325, 125, 75);
-    QRect btsuRect = QRect(190, 430, 115, 205);
-    QRect foundersRect = QRect(25, 820, 158, 105);
-    QRect olscampRect = QRect(520, 430, 135, 120);
-    QRect carillonRect = QRect(575, 785, 95, 60);
-    QRect libraryRect = QRect(835, 610, 90, 95);
-    QRect kreischerRect = QRect(1225, 475, 230, 150);
-
-
     if(event->buttons() == Qt::LeftButton && offenRect.contains(event->pos())){
         QPixmap bkgnd(":/myresources/offenhauer.jpg");//Load pic
         bkgnd = bkgnd.scaled(size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);//set scale of pic to match the window
         QPalette p = palette(); //copy current, not create new
         p.setBrush(QPalette::Background, bkgnd);//set the pic to the background
         setPalette(p);
-        location *offen = new location(this);
         offen->show();
     }
 
@@ -67,7 +78,6 @@ void MainWindow::mousePressEvent(QMouseEvent *event){
         QPalette p = palette(); //copy current, not create new
         p.setBrush(QPalette::Background, bkgnd);//set the pic to the background
         setPalette(p);
-        location *oaks = new location(this);
         oaks->show();
     }
 
@@ -77,7 +87,6 @@ void MainWindow::mousePressEvent(QMouseEvent *event){
         QPalette p = palette(); //copy current, not create new
         p.setBrush(QPalette::Background, bkgnd);//set the pic to the background
         setPalette(p);
-        location *btsu = new location(this);
         btsu->show();
     }
 
@@ -87,7 +96,6 @@ void MainWindow::mousePressEvent(QMouseEvent *event){
         QPalette p = palette(); //copy current, not create new
         p.setBrush(QPalette::Background, bkgnd);//set the pic to the background
         setPalette(p);
-        location *founders = new location(this);
         founders->show();
     }
 
@@ -97,7 +105,6 @@ void MainWindow::mousePressEvent(QMouseEvent *event){
         QPalette p = palette(); //copy current, not create new
         p.setBrush(QPalette::Background, bkgnd);//set the pic to the background
         setPalette(p);
-        location *olscamp = new location(this);
         olscamp->show();
     }
 
@@ -107,7 +114,6 @@ void MainWindow::mousePressEvent(QMouseEvent *event){
         QPalette p = palette(); //copy current, not create new
         p.setBrush(QPalette::Background, bkgnd);//set the pic to the background
         setPalette(p);
-        location *carillon = new location(this);
         carillon->show();
     }
 
@@ -117,7 +123,6 @@ void MainWindow::mousePressEvent(QMouseEvent *event){
         QPalette p = palette(); //copy current, not create new
         p.setBrush(QPalette::Background, bkgnd);//set the pic to the background
         setPalette(p);
-        location *library = new location(this);
         library->show();
     }
 
@@ -127,10 +132,8 @@ void MainWindow::mousePressEvent(QMouseEvent *event){
         QPalette p = palette(); //copy current, not create new
         p.setBrush(QPalette::Background, bkgnd);//set the pic to the background
         setPalette(p);
-        location *kreischer = new location(this);
         kreischer->show();
     }
-
     QMainWindow::mouseMoveEvent(event);
 }
 

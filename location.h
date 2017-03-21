@@ -14,6 +14,9 @@ public:
     explicit location(QWidget *parent = 0);
     ~location();
 
+protected:
+    void close();
+
 private:
     Ui::location *ui;
 };
