@@ -5,6 +5,7 @@
 #include <QPalette>
 #include <QRect>
 #include <QMouseEvent>
+#include <QFile>
 
     location *offen;
     location *oaks;
@@ -24,12 +25,14 @@
     QRect libraryRect = QRect(835, 610, 90, 95);
     QRect kreischerRect = QRect(1225, 475, 230, 150);
 
+    QFile offenFile("offen.txt");
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow){
 
     ui->setupUi(this);
-    offen = new location(this);
+    offen = new location(offenFile, this);
     oaks = new location(this);
     btsu = new location(this);
     founders = new location(this);
