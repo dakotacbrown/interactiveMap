@@ -26,6 +26,7 @@ location::location(QFile &file, QWidget *parent):QWidget(parent),
     connect(close, SIGNAL(clicked()), this, SLOT(closeWin()));
 
     this->doc = &file;
+    newText->setReadOnly(true);
 
     QPushButton *displayHours = new QPushButton("&Location Hours", this);
     connect(displayHours, SIGNAL(clicked()), this, SLOT(readFile()));
@@ -38,12 +39,14 @@ location::location(QFile &file, QWidget *parent):QWidget(parent),
 }
 
 void location::readFile(){
+    newText->setReadOnly(false);
     doc->open((QIODevice::ReadOnly | QIODevice::Text));
     QTextStream in(doc);
     QString line = in.readAll();
     doc->close();
 
-    newText->setPlainText(line);
+    newText->setHtml(line);
+    newText->setReadOnly(true);
 }
 
 /*void location::readFile(){
@@ -75,7 +78,10 @@ void location::process_line(QString line){
 }*/
 
 void location::closeWin(){
-   this->close();
+    newText->setReadOnly(false);
+    newText->clear();
+    newText->setReadOnly(true);
+    this->close();
 }
 
 location::~location(){

@@ -1,7 +1,1143 @@
-Monday              08:00 a.m. - 08:00 p.m.
-Tuesday             08:00 a.m. - 08:00 p.m.
-Wednesday           08:00 a.m. - 08:00 p.m.
-Thursday            12:00 p.m. - 08:00 p.m.
-Friday              12:00 p.m. - 08:00 p.m.
-Saturday            12:00 p.m. - 08:00 p.m.
-Sunday              CLOSED
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– --><meta charset="utf-8">
+<title></title>
+<meta name="description" content=""><meta name="author" content=""><!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– --><meta name="viewport" content="width=device-width, initial-scale=1"><!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link href="https://content.bgsudining.com/SkeletonCSS/css/raleway.css" rel="stylesheet" type="text/css" /><!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link href="https://content.bgsudining.com/SkeletonCSS/dist/css/normalize.css" rel="stylesheet" />
+<link href="https://content.bgsudining.com/SkeletonCSS/dist/css/skeleton.css" rel="stylesheet" />
+<link href="https://content.bgsudining.com/SkeletonCSS/css/custom.css" rel="stylesheet" />
+<style type="text/css">.locations {
+	display: none;
+}
+.hours {
+	display: none;
+}
+.w3-container:after {
+	content: "";
+	display: table;
+	clear: both
+}
+.w3-container {
+	padding: 0.01em 16px
+}
+.w3-border {
+	border: 1px solid #ccc!important
+}
+.w3-navbar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.w3-navbar li {
+	float: left
+}
+.w3-navbar li a {
+	display: block;
+	padding: 8px 16px
+}
+.w3-navbar li a:hover {
+	color: #000;
+	background-color: #ccc
+}
+.w3-navbar .w3-dropdown-hover, .w3-navbar .w3-dropdown-click {
+	position: static
+}
+.w3-navbar .w3-dropdown-hover:hover, .w3-navbar .w3-dropdown-hover:first-child, .w3-navbar .w3-dropdown-click:hover {
+	background-color: #ccc;
+	color: #000
+}
+.w3-navbar a, .w3-topnav a, .w3-sidenav a, .w3-dropdown-content a, .w3-accordion-content a, .w3-dropnav a {
+	text-decoration: none!important
+}
+.w3-navbar .w3-opennav.w3-right {
+	float: right!important
+}
+.w3-sidenav a, .w3-navbar a {
+	-webkit-transition: background-color .3s, color .15s, box-shadow .3s, opacity 0.3s;
+	transition: background-color .3s, color .15s, box-shadow .3s, opacity 0.3s;
+}
+.w3-sidenav {
+	height: inherit;
+	width: 200px;
+	background-color: #fff;
+	position: relative!important;
+	z-index: 1;
+	overflow: auto
+}
+.w3-sidenav a {
+	padding: 4px 2px 4px 16px
+}
+.w3-sidenav a:hover {
+	background-color: #ccc;
+	color: #000;
+}
+.w3-sidenav a, .w3-dropnav a {
+	display: block
+}
+.w3-sidenav .w3-dropdown-hover:hover, .w3-sidenav .w3-dropdown-hover:first-child, .w3-sidenav .w3-dropdown-click:hover, .w3-dropnav a:hover {
+	background-color: #ccc;
+	color: #000
+}
+.w3-sidenav .w3-dropdown-hover, .w3-sidenav .w3-dropdown-click {
+	width: 100%
+}
+.w3-sidenav .w3-dropdown-hover .w3-dropdown-content, .w3-sidenav .w3-dropdown-click .w3-dropdown-content {
+	min-width: 100%
+}
+.w3-black, .w3-hover-black:hover {
+	color: #fff!important;
+	background-color: #000!important
+}
+.w3-red, .w3-hover-red:hover {
+	color: #fff!important;
+	background-color: #f44336!important
+}
+.w3-text {
+	color: #fff;
+}
+.w3-card-2 {
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12)!important
+}
+.w3-animate-fading {
+	-webkit-animation: fading 10s infinite;
+	animation: fading 10s infinite
+}
+ @-webkit-keyframes fading {
+0% {
+opacity:0
+}
+50% {
+opacity:1
+}
+100% {
+opacity:0
+}
+}
+ @keyframes fading {
+0% {
+opacity:0
+}
+50% {
+opacity:1
+}
+100% {
+opacity:0
+}
+}
+.w3-animate-opacity {
+	-webkit-animation: opac 1.5s;
+	animation: opac 1.5s
+}
+ @-webkit-keyframes opac {
+from {
+opacity:0
+}
+to {
+opacity:1
+}
+}
+ @keyframes opac {
+from {
+opacity:0
+}
+to {
+opacity:1
+}
+}
+.w3-animate-top {
+	position: relative;
+	-webkit-animation: animatetop 0.4s;
+	animation: animatetop 0.4s
+}
+ @-webkit-keyframes animatetop {
+from {
+top:-300px;
+opacity:0
+}
+to {
+top:0;
+opacity:1
+}
+}
+ @keyframes animatetop {
+from {
+top:-300px;
+opacity:0
+}
+to {
+top:0;
+opacity:1
+}
+}
+.w3-animate-left {
+	position: relative;
+	-webkit-animation: animateleft 0.4s;
+	animation: animateleft 0.4s
+}
+ @-webkit-keyframes animateleft {
+from {
+left:-300px;
+opacity:0
+}
+to {
+left:0;
+opacity:1
+}
+}
+ @keyframes animateleft {
+from {
+left:-300px;
+opacity:0
+}
+to {
+left:0;
+opacity:1
+}
+}
+.w3-animate-right {
+	position: relative;
+	-webkit-animation: animateright 0.4s;
+	animation: animateright 0.4s
+}
+ @-webkit-keyframes animateright {
+from {
+right:-300px;
+opacity:0
+}
+to {
+right:0;
+opacity:1
+}
+}
+ @keyframes animateright {
+from {
+right:-300px;
+opacity:0
+}
+to {
+right:0;
+opacity:1
+}
+}
+.w3-animate-bottom {
+	position: relative;
+	-webkit-animation: animatebottom 0.4s;
+	animation: animatebottom 0.4s
+}
+ @-webkit-keyframes animatebottom {
+from {
+bottom:-300px;
+opacity:0
+}
+to {
+bottom:0px;
+opacity:1
+}
+}
+ @keyframes animatebottom {
+from {
+bottom:-300px;
+opacity:0
+}
+to {
+bottom:0;
+opacity:1
+}
+}
+.w3-animate-zoom {
+	-webkit-animation: animatezoom 0.6s;
+	animation: animatezoom 0.6s
+}
+ @-webkit-keyframes animatezoom {
+from {
+-webkit-transform:scale(0)
+}
+to {
+-webkit-transform:scale(1)
+}
+}
+ @keyframes animatezoom {
+from {
+transform:scale(0)
+}
+to {
+transform:scale(1)
+}
+}
+.w3-animate-input {
+	-webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out
+}
+.w3-animate-input:focus {
+	width: 100%!important
+}
+.spanStyle {
+	color: #ff7300;
+	font-size: 1.2em;
+	font-weight: bold;
+	padding: 0;
+	letter-spacing: -0.01em;
+}
+.closed {
+	color: #000;
+	font-weight: bold;
+	text-transform: uppercase;
+	background-color: #ff7300;
+}
+</style>
+<!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– --><script src="https://content.bgsudining.com/SkeletonCSS/js/jquery.min.js"></script><script src="https://content.bgsudining.com/SkeletonCSS/js/run_prettify.js"></script>
+<link href="https://content.bgsudining.com/SkeletonCSS/css/github-prettify-theme.css" rel="stylesheet" /><script src="https://content.bgsudining.com/SkeletonCSS/js/site.js"></script><script>
+function openLocation(evt, locationName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("locations");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(locationName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+
+function openTab(evt, hourName) {
+  var i, x, tablonks;
+  x = document.getElementsByClassName("hours");
+  for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+  }
+  tablonks = document.getElementsByClassName("tablonk");
+  for (i = 0; i < x.length; i++) {
+      tablonks[i].className = tablonks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(hourName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+
+window.onload = openLocation(event, "BTSU");
+window.onload = openTab(event, "Falcons Nest");
+</script>
+</head>
+<body class="code-snippets-visible">
+
+<!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="container">
+<h2 align="center" class="title" id="top">Locations &amp; Hours</h2>
+
+<div class="docs-section" id="locations">
+<h5><a class="topLinks" href="https://content.bgsudining.com/map">Interactive campus dining map</a></h5>
+
+<h5><a class="topLinks" href="https://new.dineoncampus.com/bgsu/emergency-hours">Emergency Hours</a></h5>
+<br />
+<br />
+<br />
+&nbsp;
+<nav class="w3-sidenav w3-black w3-card-2" style="width:200px;">
+<div class="w3-container">
+<h5>Locations</h5>
+</div>
+<a class="tablink w3-text" href="#" onclick="openLocation(event, 'BTSU')">BTSU</a> <a class="tablink w3-text" href="#" onclick="openLocation(event, 'The Oaks')">The Oaks</a> <a class="tablink w3-text" href="#" onclick="openLocation(event, 'Dunkin')">Dunkin' Donuts</a> <a class="tablink w3-text" href="#" onclick="openLocation(event, 'Carillon Place')">Carillon Place</a> <a class="tablink w3-text" href="#" onclick="openLocation(event, 'Kreischer')">Kreischer</a> <a class="tablink w3-text" href="#" onclick="openLocation(event, 'Outtakes')">Outtakes</a></nav>
+
+<div style="width:100%;">
+<div class="w3-container locations w3-animate-left" id="BTSU" style="padding-right:0 !important; top:-290px;">
+<h2 style="margin-left:196px !important;">BTSU</h2>
+<img alt="BTSU" src="https://content.bgsudining.com/images/hours/btsu.png" style="margin-left:196px !important;" />
+<div style="padding-left:51px">
+<ul class="w3-navbar w3-black">
+	<li><a class="tablonk w3-text" href="#" onclick="openTab(event, 'Falcons Nest');">The Falcon's Nest</a></li>
+	<li><a class="tablonk w3-text" href="#" onclick="openTab(event, 'Pub');">The Black Swamp Pub &amp; Bistro</a></li>
+	<li><a class="tablonk w3-text" href="#" onclick="openTab(event, 'Starbucks');">Starbucks</a></li>
+	<li><a class="tablonk w3-text" href="#" onclick="openTab(event, 'Marcos');">Marco's Pizza</a></li>
+	<li><a class="tablonk w3-text" href="#" onclick="openTab(event, 'falconsOuttakes');">Outtakes</a></li>
+</ul>
+
+<div class="w3-container w3-border hours w3-animate-opacity" id="Falcons Nest">
+<h4>The Falcon's Nest</h4>
+
+<p>Looking for a quick snack or meal? The Falcon’s Nest is the place for you. Located in the Bowen Thompson Student Union, it offers multiple, distinguishable food options. You can find Marco’s Pizza, Panda Express, Olo Sushi, Chickendipity, Wild Greens, Jamba Juice, Steak Escape and Mondo Subs.</p>
+
+<div class="row">
+<div class="four columns"><img alt="The Falcon's Nest logo" src="https://content.bgsudining.com/images/locations/FalconsNest.png" /></div>
+
+<div class="eight columns"><span class="spanStyle">Hours</span>
+
+<table style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width:50%">Monday—Thursday</td>
+			<td>&nbsp;&nbsp;8:00 a.m. — 8:00 p.m.</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Friday</td>
+			<td>&nbsp;&nbsp;8:00 a.m. — 7:00 p.m.</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Saturday—Sunday</td>
+			<td>11:00 a.m. — 7:00 p.m.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span class="spanStyle">Contact</span><br />
+The Falcon's Nest: 419.372.2641</p>
+</div>
+</div>
+</div>
+
+<div class="w3-container w3-border hours w3-animate-opacity" id="Pub">
+<h4>The Black Swamp Pub &amp; Bistro</h4>
+
+<p>The Black Swamp Pub &amp; Bistro is a full service pub inside of the Bowen Thompson Student Union. Equipped with a large menu, including appetizers, soups and salads, entrees and desserts, the Black Swamp Pub &amp; Bistro offers something for everyone. They also offer unique, daily lunch specials and a special late night menu.</p>
+
+<div class="row">
+<div class="four columns"><img alt="" src="https://content.bgsudining.com/images/locations/blackswampandbistro.png" /></div>
+
+<div class="eight columns"><span class="spanStyle">Hours</span>
+
+<table style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width:50%">Monday—Friday</td>
+			<td>11:30 a.m. — 9:00 p.m.</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Saturday</td>
+			<td>&nbsp;&nbsp;4:00 p.m. — 9:00 p.m.</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Sunday</td>
+			<td class="closed">CLOSED</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span class="spanStyle">Contact</span><br />
+The Pub &amp; Bistro: 419.372.4386</p>
+</div>
+</div>
+</div>
+
+<div class="w3-container w3-border hours w3-animate-opacity" id="Starbucks">
+<h4>Starbucks</h4>
+
+<p>Starbucks, our second coffee shop on campus, is conveniently located in the Bowen Thompson Student Union. They offer specialty hot and cold beverages and an assortment of pastries. Starbucks also has relaxing lounge area where students and faculty can chat with friends or do their schoolwork.</p>
+
+<div class="row">
+<div class="four columns"><img alt="Starbucks logo" src="https://content.bgsudining.com/images/locations/SBXlogo.png" /></div>
+
+<div class="eight columns"><span class="spanStyle">Hours</span>
+
+<table style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width:50%">Monday—Thursday</td>
+			<td>&nbsp;&nbsp;7:30 a.m. — 10:00 p.m.</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Friday</td>
+			<td>&nbsp;&nbsp;7:30 a.m. — 9:00 p.m.</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Saturday</td>
+			<td>11:00 a.m. — &nbsp;&nbsp;9:00 p.m.</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Sunday</td>
+			<td>10:30 a.m. — 10:00 p.m.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span class="spanStyle">Contact</span><br />
+Starbucks: 419.372.9011</p>
+</div>
+</div>
+</div>
+
+<div class="w3-container w3-border hours w3-animate-opacity" id="Marcos">
+<h4>Marco's Pizza</h4>
+
+<p>Located in the Hub of campus, the Bowen Thompson Student Union, Marco’s is a convenient and tasty eatery. During lunch, Marco’s offers a pizza buffet with a variety of options. After 4 p.m., they open as a full service pizza kitchen. You can order salad, wings, Cheezy Bread, a wide range of specialty pizzas and much more.</p>
+
+<div class="row">
+<div class="four columns"><img alt="Marco's Pizza" src="https://content.bgsudining.com/images/locations/marcos.png" /></div>
+
+<div class="eight columns"><span class="spanStyle">Hours</span>
+
+<table style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width:50%">Monday—Sunday</td>
+			<td>4:00 p.m. — 2:00 a.m.*</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>*Phone orders will be accepted until 1:30 am. Walk up only from 1:30 am - 2 am.</p>
+
+<p><span class="spanStyle">Contact</span><br />
+Marco’s Window at the Nest: 419.372.5555</p>
+</div>
+</div>
+</div>
+
+<div class="w3-container w3-border hours w3-animate-opacity" id="falconsOuttakes">
+<h4>Outtakes @ The Falcon's Nest</h4>
+
+<p>Conveniently located at the heart of campus, this store has so much to offer. This Outtakes serves freshly made soups, Fresh Food To Go sandwiches and salads, snacks, drinks and so much more.</p>
+
+<div class="row">
+<div class="four columns"><img alt="Outtakes at Falcons Nest" src="https://content.bgsudining.com/images/locations/outtakes/outtakes_falconsnest.png" /></div>
+
+<div class="eight columns"><span class="spanStyle">Hours</span>
+
+<table style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width:50%">Monday—Thursday</td>
+			<td>10:00 a.m. — 9:00 p.m.</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Friday</td>
+			<td>10:00 a.m. — 8:00 p.m.</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+			<p>Freshly made foods served from 10:30 a.m. — 3:30 p.m.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Saturday—Sunday</td>
+			<td class="closed">CLOSED</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span class="spanStyle">Contact</span><br />
+Outtakes at the Nest: 419.372.5304</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="w3-container locations w3-animate-left" id="The Oaks" style="padding-right:0 !important; top:-290px;">
+<h2 style="margin-left:196px !important;">The Oaks</h2>
+<img alt="The Oaks" src="https://content.bgsudining.com/images/hours/theoaks.png" style="margin-left:196px !important;" />
+<div style="padding-left:51px">
+<ul class="w3-navbar w3-black">
+	<li><a class="tablonk w3-text" href="#" onclick="openTab(event, 'Oaks');">The Oaks</a></li>
+	<li><a class="tablonk w3-text" href="#" onclick="openTab(event, 'DunkinDonuts');">Dunkin' Donuts</a></li>
+</ul>
+
+<div class="w3-container w3-border hours w3-animate-opacity" id="Oaks">
+<h4>The Oaks</h4>
+
+<p>Our newest, state of the art AYCE facility hosts a number of dining stations to satisfy your every craving. The Shoots station serves delicious vegan options, the Hearthstone Oven serves pizza and other Italian fare, our Market Fresh station offers fresh salad and soups, the MyChef and The Kitchen stations are always serving home-cooked meals and at the Baker's Crust you can find freshly baked desserts.</p>
+
+<div class="row">
+<div class="four columns"><img alt="The Oaks logo" src="https://content.bgsudining.com/images/locations/theoaks.png" width="208" /></div>
+
+<div class="eight columns"><span class="spanStyle">Hours</span>
+
+<table style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width:50%">Monday — Thursday</td>
+			<td>&nbsp;&nbsp;9:00 a.m. — 9:00 p.m.</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Friday</td>
+			<td>&nbsp;&nbsp;9:00 a.m. — 8:00 p.m.</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Saturday</td>
+			<td>10:00 a.m. — 8:00 p.m.</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Sunday</td>
+			<td>10:00 a.m. — 9:00 p.m.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span class="spanStyle">Contact</span><br />
+The Oaks: 419.372.2771</p>
+</div>
+</div>
+</div>
+
+<div class="w3-container w3-border hours w3-animate-opacity" id="DunkinDonuts">
+<h4>Dunkin' Donuts</h4>
+
+<p>Dunkin' Donuts, also located inside of the Oaks, is one of our coffee shops on campus. DD offers an assortment of hot and cold beverages, pastries and hot food items.</p>
+
+<div class="row">
+<div class="four columns"><img alt="Dunkin' Donuts" src="https://content.bgsudining.com/images/locations/dunkindonuts.png" /></div>
+
+<div class="eight columns"><span class="spanStyle">Hours</span>
+
+<table style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width:50%">Monday—Sunday</td>
+			<td>6:00 a.m. — 6:00 p.m.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span class="spanStyle">Contact</span><br />
+Dunkin’ Donuts: 419.372.5309</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="w3-container locations w3-animate-left" id="Dunkin" style="padding-right:0 !important; top:-290px;">
+<h2 style="margin-left:196px !important;">Dunkin' Donuts</h2>
+<img alt="Dunkin' Donuts" src="https://content.bgsudining.com/images/hours/dunkin.png" style="margin-left:196px !important;" />
+<div style="padding-left:51px">
+<ul class="w3-navbar w3-black">
+	<li><a class="tablonk w3-text" href="#" onclick="openTab(event, 'DD');">Dunkin' Donuts</a></li>
+	<li><a class="tablonk w3-text" href="#" onclick="openTab(event, 'DunkinCart');">Dunkin' Cart @ Olscamp</a></li>
+</ul>
+
+<div class="w3-container w3-border hours w3-animate-opacity" id="DD">
+<h4>Dunkin' Donuts</h4>
+
+<p>Dunkin' Donuts, also located inside of the Oaks, is one of our coffee shops on campus. DD offers an assortment of hot and cold beverages, pastries and hot food items. For convenience, a Dunkin' Cart was opened in Olscamp Hall to give students and faculty an opportunity to grab a mid-day pick-me-up. America runs on Dunkin', but so does BGSU.</p>
+
+<div class="row">
+<div class="four columns"><img alt="Dunkin' Donuts" src="https://content.bgsudining.com/images/locations/dunkindonuts.png" /></div>
+
+<div class="eight columns"><span class="spanStyle">Hours</span>
+
+<table style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width:50%">Monday—Sunday</td>
+			<td>6:00 a.m. — 6:00 p.m.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span class="spanStyle">Contact</span><br />
+Dunkin' Donuts: 419.372.5309</p>
+</div>
+</div>
+</div>
+
+<div class="w3-container w3-border hours w3-animate-opacity" id="DunkinCart">
+<h4>Dunkin' Cart @ Olscamp</h4>
+
+<p>Dunkin' Donuts, also located inside of the Oaks, is one of our coffee shops on campus. DD offers an assortment of hot and cold beverages, pastries and hot food items. For convenience, a Dunkin' Cart was opened in Olscamp Hall to give students and faculty an opportunity to grab a mid-day pick-me-up. America runs on Dunkin', but so does BGSU.</p>
+
+<div class="row">
+<div class="four columns"><img alt="Dunkin' Donuts" src="https://content.bgsudining.com/images/locations/dunkindonuts.png" /></div>
+
+<div class="eight columns"><span class="spanStyle">Hours</span>
+
+<table style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width:50%">Monday—Tursday</td>
+			<td>8:00 a.m. — 6:00 p.m.</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Friday</td>
+			<td>8:00 a.m. — 2:00 p.m.</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Saturday—Sunday</td>
+			<td class="closed">CLOSED</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span class="spanStyle">Contact</span><br />
+Dunkin’ Cart at Olscamp: 419.372.5309</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="w3-container locations w3-animate-left" id="Carillon Place" style="padding-right:0 !important; top:-290px;">
+<h2 style="margin-left:196px !important;">Carillon Place</h2>
+<img alt="Carillon Place" src="https://content.bgsudining.com/images/hours/carillonplace.png" style="margin-left:196px !important;" />
+<div style="padding-left:51px">
+<ul class="w3-navbar w3-black">
+	<li><a class="tablonk w3-text" href="#" onclick="openTab(event, 'CP');">Carillon Place</a></li>
+	<li><a class="tablonk w3-text" href="#" onclick="openTab(event, 'OuttakesCP');">Outtakes @ Carillon Place</a></li>
+</ul>
+
+<div class="w3-container w3-border hours w3-animate-opacity" id="CP">
+<h4>Carillon Place</h4>
+
+<p>The Carillon place is our other LEED-Certified, AYCE facility. It offers stations similar to those at the Oaks, but the menu is always different. Like the Oaks, the Carillon Place offers a Hearthstone Oven, Market Fresh station, The Kitchen and Baker’s Crust. Additionally, the CP has a MyPantry station, which offers a rotating menu of healthier options, including gluten-free and specialty diet alternatives. Finally, Carillon Place has a Eurasian Grill, which serves delicious oriental dishes.</p>
+
+<div class="row">
+<div class="four columns"><img alt="Carillon Place logo" height="73" src="https://content.bgsudining.com/images/locations/CarillonPlace.png" width="189" /></div>
+
+<div class="eight columns"><span class="spanStyle">Hours</span>
+
+<table style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width:50%">Monday—Thursday</td>
+			<td>7:30 a.m. — 8:00 p.m.</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Friday</td>
+			<td>7:30 a.m. — 7:00 p.m.</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Saturday—Sunday</td>
+			<td>9:00 a.m. — 7:00 p.m.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span class="spanStyle">Contact</span><br />
+Carillon Place: 419.372.6101</p>
+</div>
+</div>
+</div>
+
+<div class="w3-container w3-border hours w3-animate-opacity" id="OuttakesCP">
+<h4>Outtakes @ Carillon Place</h4>
+
+<p>Located in Carillon Place, this convenience store boasts a large selection of healthy options along with frozen dinners, snacks and much more. It also houses the Sweet Shoppe, which makes fresh, homemade fudge, cookies, chocolate covered treats and more.</p>
+
+<div class="row">
+<div class="four columns"><img alt="Outtakes at the Carillon Place" src="https://content.bgsudining.com/images/locations/outtakes/outtakes_carillonplace.png" /></div>
+
+<div class="eight columns"><span class="spanStyle">Hours</span>
+
+<table style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width:50%">Monday—Friday</td>
+			<td>9:00 a.m. — 11:00 p.m.</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Saturday—Sunday</td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;noon — 11:00 p.m.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span class="spanStyle">Contact</span><br />
+Outtakes at Carillon Place: 419.372.6107</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="w3-container locations w3-animate-left" id="Kreischer" style="padding-right:0 !important; top:-290px;">
+<h2 style="margin-left:196px !important;">Kreischer</h2>
+<img alt="Kreischer" src="https://content.bgsudining.com/images/hours/kreischer.png" style="margin-left:196px !important;" />
+<div style="padding-left:51px">
+<ul class="w3-navbar w3-black">
+	<li><a class="tablonk w3-text" href="#" onclick="openTab(event, 'mp');">Marco's Pizza</a></li>
+	<li><a class="tablonk w3-text" href="#" onclick="openTab(event, 'Paninos');">Paninos</a></li>
+	<li><a class="tablonk w3-text" href="#" onclick="openTab(event, 'Smokin');">Smokin' Jalapeños</a></li>
+	<li><a class="tablonk w3-text" href="#" onclick="openTab(event, 'Burger');">Burger 325</a></li>
+	<li><a class="tablonk w3-text" href="#" onclick="openTab(event, 'Scrambles');">Scrambles</a></li>
+	<li><a class="tablonk w3-text" href="#" onclick="openTab(event, 'otk');">Outtakes</a></li>
+</ul>
+
+<div class="w3-container w3-border hours w3-animate-opacity" id="mp">
+<h4>Marco's Pizza</h4>
+
+<p>Located in the Kreischer Sundial, Marco’s Late Night is a convenient and tasty eatery for those late nights on the east side of campus. Open from 5pm to Midnight, Marco’s offers a variety of options of salads, Cheesy Bread, Chicken Wings a wide range of specialty pizzas and much more.</p>
+
+<div class="row">
+<div class="four columns"><img alt="Marco's Pizza" src="https://content.bgsudining.com/images/locations/marcos.png" /></div>
+
+<div class="eight columns"><span class="spanStyle">Hours</span>
+
+<table style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width:50%">Monday—Sunday</td>
+			<td>5:00 p.m. — midnight</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span class="spanStyle">Contact</span><br />
+Marco’s at Kreischer: 419.372.3330</p>
+</div>
+</div>
+</div>
+
+<div class="w3-container w3-border hours w3-animate-opacity" id="Paninos">
+<h4>Paninos</h4>
+
+<p>Get a hot and freshly pressed Panini with all your favorite toppings.</p>
+
+<div class="row">
+<div class="four columns"><img alt="Paninos" src="https://content.bgsudining.com/images/locations/paninos.png" /></div>
+
+<div class="eight columns"><span class="spanStyle">Hours</span>
+
+<table style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width:50%">Sunday—Thursday</td>
+			<td>5:00 p.m. — 9:00 p.m.</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Friday—Saturday</td>
+			<td class="closed">closed</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span class="spanStyle">Contact</span><br />
+Kreischer Sundial Late Night: 419.372.2825</p>
+</div>
+</div>
+</div>
+
+<div class="w3-container w3-border hours w3-animate-opacity" id="Smokin">
+<h4>Smokin' Jalapeños</h4>
+
+<p>Enjoy a taste of the southern boarder at Smokin’ Jalapeños! Try a bursting burrito or nachos with your favorite toppings and cheese.</p>
+
+<div class="row">
+<div class="four columns"><img alt="Smokin Jalapenos" src="https://content.bgsudining.com/images/locations/smokin.png" /></div>
+
+<div class="eight columns"><span class="spanStyle">Hours</span>
+
+<table style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width:50%">Monday—Sunday</td>
+			<td>5:00 p.m. — midnight</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span class="spanStyle">Contact</span><br />
+Kreischer Sundial Late Night: 419.372.2825</p>
+</div>
+</div>
+</div>
+
+<div class="w3-container w3-border hours w3-animate-opacity" id="Burger">
+<h4>Burger Bar 325</h4>
+
+<p>Burgers never had it so good at Burger Bar 325! Get a custom made burger just the way you like it.</p>
+
+<div class="row">
+<div class="four columns"><img alt="The Falcon's Nest logo" src="https://content.bgsudining.com/images/locations/burger325.png" /></div>
+
+<div class="eight columns"><span class="spanStyle">Hours</span>
+
+<table style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width:50%">Monday—Sunday</td>
+			<td>5:00 p.m. — midnight</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span class="spanStyle">Contact</span><br />
+Kreischer Sundial Late Night: 419.372.2825</p>
+</div>
+</div>
+</div>
+
+<div class="w3-container w3-border hours w3-animate-opacity" id="Scrambles">
+<h4>Scrambles</h4>
+
+<p>This late night breakfast food location is there with all your early morning favorites whenever you want!</p>
+
+<div class="row">
+<div class="four columns"><img alt="The Falcon's Nest logo" src="https://content.bgsudining.com/images/locations/scrambles.png" /></div>
+
+<div class="eight columns"><span class="spanStyle">Hours</span>
+
+<table style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width:50%">Sunday—Thursday</td>
+			<td>5:00 p.m. — 9:00 p.m.</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Friday—Saturday</td>
+			<td class="closed">closed</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span class="spanStyle">Contact</span><br />
+Kreischer Sundial Late Night: 419.372.2825</p>
+</div>
+</div>
+</div>
+
+<div class="w3-container w3-border hours w3-animate-opacity" id="otk">
+<h4>Outtakes @ Kreischer</h4>
+
+<p>This convenience store is located in Kreischer Residence Hall and is stocked with a wide variety of items, including frozen meals, snacks, grab and go meals, and toiletries.</p>
+
+<div class="row">
+<div class="four columns"><img alt="Outtakes at the Kreischer" src="https://content.bgsudining.com/images/locations/outtakes/outtakes_kreischer.png" /></div>
+
+<div class="eight columns"><span class="spanStyle">Hours</span>
+
+<table style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width:50%">Monday—Friday</td>
+			<td>7:30 a.m. — 11:00 p.m.</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Saturday—Sunday</td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;noon — 11:00 p.m.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span class="spanStyle">Contact</span><br />
+Outtakes at Kreischer: 419.372.7621</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="w3-container locations w3-animate-left" id="Outtakes" style="padding-right:0 !important; top:-290px;">
+<h2 style="margin-left:196px !important;">Outtakes</h2>
+<img alt="Outtakes" src="https://content.bgsudining.com/images/hours/outtakes.png" style="margin-left:196px !important;" />
+<div style="padding-left:51px">
+<ul class="w3-navbar w3-black">
+	<li><a class="tablonk w3-text" href="#" onclick="openTab(event, 'ocp');">Carillon Place</a></li>
+	<li><a class="tablonk w3-text" href="#" onclick="openTab(event, 'ofn');">Falcon's Nest</a></li>
+	<li><a class="tablonk w3-text" href="#" onclick="openTab(event, 'Founders');">Founders</a></li>
+	<li><a class="tablonk w3-text" href="#" onclick="openTab(event, 'Library');">Library</a></li>
+	<li><a class="tablonk w3-text" href="#" onclick="openTab(event, 'Offenhauer');">Offenhauer</a></li>
+	<li><a class="tablonk w3-text" href="#" onclick="openTab(event, 'ok');">Kreischer</a></li>
+</ul>
+
+<div class="w3-container w3-border hours w3-animate-opacity" id="ocp">
+<h4>Outtakes @ Carillon Place</h4>
+
+<p>Located in Carillon Place, this convenience store boasts a large selection of healthy options along with frozen dinners, snacks and much more. It also houses the Sweet Shoppe, which makes fresh, homemade fudge, cookies, chocolate covered treats and more.</p>
+
+<div class="row">
+<div class="four columns"><img alt="Outtakes at the Carillon Place" src="https://content.bgsudining.com/images/locations/outtakes/outtakes_carillonplace.png" /></div>
+
+<div class="eight columns"><span class="spanStyle">Hours</span>
+
+<table style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width:50%">Monday—Friday</td>
+			<td>9:00 a.m. — 11:00 p.m.</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Saturday—Sunday</td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;noon — 11:00 p.m.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span class="spanStyle">Contact</span><br />
+Outtakes at Carillon Place: 419.372.6107</p>
+</div>
+</div>
+</div>
+
+<div class="w3-container w3-border hours w3-animate-opacity" id="ofn">
+<h4>Outtakes @ Falcon's Nest</h4>
+
+<p>Conveniently located at the heart of campus, this store has so much to offer. This Outtakes serves freshly made soups, Fresh Food To Go sandwiches and salads, snacks, drinks and so much more.</p>
+
+<div class="row">
+<div class="four columns"><img alt="Outtakes at Falcons Nest" src="https://content.bgsudining.com/images/locations/outtakes/outtakes_falconsnest.png" /></div>
+
+<div class="eight columns"><span class="spanStyle">Hours</span>
+
+<table style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width:50%">Monday—Thursday</td>
+			<td>10:00 a.m. — 9:00 p.m.</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Friday</td>
+			<td>10:00 a.m. — 8:00 p.m.</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+			<p>Freshly made foods served from 10:30 a.m. — 3:30 p.m.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Saturday—Sunday</td>
+			<td class="closed">CLOSED</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span class="spanStyle">Contact</span><br />
+Outtakes at the Nest: 419.372.5304</p>
+</div>
+</div>
+</div>
+
+<div class="w3-container w3-border hours w3-animate-opacity" id="Founders">
+<h4>Outtakes @ Founders</h4>
+
+<p>This convenience store, located next to the Honors College in Founders Hall, is stocked with a variety of items including frozen and grab-and-go meals, a large variety of snacks and toiletries.</p>
+
+<div class="row">
+<div class="four columns"><img alt="Outtakes at the Founders" src="https://content.bgsudining.com/images/locations/outtakes/outtakes_founders.png" /></div>
+
+<div class="eight columns"><span class="spanStyle">Hours</span>
+
+<table style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width:50%">Sunday—Thursday</td>
+			<td>5:00 p.m. — 11:00 p.m.</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Friday—Saturday</td>
+			<td>5:00 p.m. — 10:00 p.m.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span class="spanStyle">Contact</span><br />
+Outtakes at Founders: 419.372.7586</p>
+</div>
+</div>
+</div>
+
+<div class="w3-container w3-border hours w3-animate-opacity" id="Library">
+<h4>Outtakes @ Jerome Library's Thinker's Café</h4>
+
+<p>This convenience store is located in the Jerome Library's Thinker's Café. Stocked with everything you need for a night of studying, it offers snacks, drinks, grab and go meals and much more.</p>
+
+<div class="row">
+<div class="four columns"><img alt="Outtakes at the Library" src="https://content.bgsudining.com/images/locations/outtakes/outtakes_jeromelibrary.png" /></div>
+
+<div class="eight columns"><span class="spanStyle">Hours</span>
+
+<table style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width:50%">Monday—Thursday</td>
+			<td>10:00 a.m. — 6:00 p.m.</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Friday</td>
+			<td>10:00 a.m. — 3:00 p.m.</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Saturday—Sunday</td>
+			<td class="closed">CLOSED</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span class="spanStyle">Contact</span><br />
+Outtakes at Jerome Library &amp; Thinker's Cafe: 419.372.5316</p>
+</div>
+</div>
+</div>
+
+<div class="w3-container w3-border hours w3-animate-opacity" id="Offenhauer">
+<h4>Outtakes @ Offenhauer</h4>
+
+<p>This convenience store, located on the first floor of Offenhauer Towers, has everything you might need. Items range from frozen and grab-and-go meals, snacks and drinks to toiletries and household items.</p>
+
+<div class="row">
+<div class="four columns"><img alt="Outtakes at the Offenhauer" src="https://content.bgsudining.com/images/locations/outtakes/outtakes_offenhauer.png" /></div>
+
+<div class="eight columns"><span class="spanStyle">Hours</span>
+
+<table style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width:50%">Monday—Friday</td>
+			<td>7:30 a.m. — 11:00 p.m.</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Saturday—Sunday</td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;noon — 11:00 p.m.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span class="spanStyle">Contact</span><br />
+Outtakes at Offenhauer: 419.372.4538</p>
+</div>
+</div>
+</div>
+
+<div class="w3-container w3-border hours w3-animate-opacity" id="ok">
+<h4>Outtakes @ Kreischer</h4>
+
+<p>This convenience store is located in Kreischer Residence Hall and is stocked with a wide variety of items, including frozen meals, snacks, grab and go meals, and toiletries.</p>
+
+<div class="row">
+<div class="four columns"><img alt="Outtakes at the Kreischer" src="https://content.bgsudining.com/images/locations/outtakes/outtakes_kreischer.png" /></div>
+
+<div class="eight columns"><span class="spanStyle">Hours</span>
+
+<table style="width:100%;">
+	<tbody>
+		<tr>
+			<td style="width:50%">Monday—Friday</td>
+			<td>7:30 a.m. — 11:00 p.m.</td>
+		</tr>
+		<tr>
+			<td style="width:50%">Saturday—Sunday</td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;noon — 11:00 p.m.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span class="spanStyle">Contact</span><br />
+Outtakes at Kreischer: 419.372.7621</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Google Analytics --><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61475611-1', 'auto');
+  ga('send', 'pageview');
+
+</script><!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
