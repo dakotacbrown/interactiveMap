@@ -25,7 +25,7 @@
     QRect libraryRect = QRect(835, 610, 90, 95);
     QRect kreischerRect = QRect(1225, 475, 230, 150);
 
-    QFile offenFile("offen.txt");
+    QFile offenFile(":/myresources/offen.txt");
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),

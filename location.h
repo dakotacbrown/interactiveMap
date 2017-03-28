@@ -3,8 +3,7 @@
 
 #include <QWidget>
 #include <QFile>
-#include <QTextBrowser>
-
+#include <QTextEdit>
 namespace Ui {
     class location;
 }
@@ -12,14 +11,20 @@ namespace Ui {
 class location : public QWidget{
     Q_OBJECT
 
-public:
-    explicit location(QWidget *parent = 0);
-    explicit location(const QFile &file, QWidget *parent = 0);
-    ~location();
-
 public slots:
     void closeWin();
-    void readFile(QFile &file, QTextBrowser &textBox);
+    void readFile();
+
+public:
+    explicit location(QWidget *parent = 0);
+    explicit location(QFile &file, QWidget *parent = 0);
+    ~location();
+
+protected:
+    QTextEdit *newText = new QTextEdit();
+    //QTableWidget *newTable = new QTableWidget();
+    QFile *doc = new QFile();
+    //void process_line(QString);
 
 private:
     Ui::location *ui;

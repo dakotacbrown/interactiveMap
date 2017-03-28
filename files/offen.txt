@@ -1,7 +1,7 @@
-Monday 08:00 a.m. - 08:00 p.m.
-Tuesday 08:00 a.m. - 08:00 p.m.
-Wednesday 08:00 a.m. - 08:00 p.m.
-Thursday 12:00 p.m. - 08:00 p.m.
-Friday 12:00 p.m. - 08:00 p.m.
-Saturday 12:00 p.m. - 08:00 p.m.
-Sunday CLOSED ____ _ ______ ____
+Monday              08:00 a.m. - 08:00 p.m.
+Tuesday             08:00 a.m. - 08:00 p.m.
+Wednesday           08:00 a.m. - 08:00 p.m.
+Thursday            12:00 p.m. - 08:00 p.m.
+Friday              12:00 p.m. - 08:00 p.m.
+Saturday            12:00 p.m. - 08:00 p.m.
+Sunday              CLOSED
