@@ -22,20 +22,49 @@ location::location(QFile &file, QWidget *parent):QWidget(parent),
     ui->setupUi(this);
     this->setWindowFlags(Qt::CustomizeWindowHint | Qt::Window);
     this->setWindowModality(Qt::WindowModal);
-    QPushButton *close = new QPushButton("&Close", this);
-    connect(close, SIGNAL(clicked()), this, SLOT(closeWin()));
 
-    this->doc = &file;
+    doc = &file;
     newText->setReadOnly(true);
 
-    QPushButton *displayHours = new QPushButton("&Location Hours", this);
+    closeButton = new QPushButton("&Close", this);
+    displayHours = new QPushButton("&Location Hours", this);
+
+    connect(closeButton, SIGNAL(clicked()), this, SLOT(closeWin()));
     connect(displayHours, SIGNAL(clicked()), this, SLOT(readFile()));
 
      QGridLayout *layout = new QGridLayout();
      this->setLayout(layout);
-     layout->addWidget (close, 1, 1);
      layout->addWidget (displayHours, 1, 0);
+     layout->addWidget (closeButton, 1, 1);
      layout->addWidget (newText, 0, 0, 1, 2);
+}
+
+location::location(QFile &file, QFile &file2, QWidget *parent):QWidget(parent),
+    ui(new Ui::location){
+    ui->setupUi(this);
+    this->setWindowFlags(Qt::CustomizeWindowHint | Qt::Window);
+    this->setWindowModality(Qt::WindowModal);
+
+    doc = &file;
+    doc2 = &file2;
+
+    newText->setReadOnly(true);
+
+    closeButton = new QPushButton("&Close", this);
+    displayHours = new QPushButton("&Location Hours", this);
+    displayMenus = new QPushButton("&Location Menus", this);
+
+    connect(closeButton, SIGNAL(clicked()), this, SLOT(closeWin()));
+    connect(displayHours, SIGNAL(clicked()), this, SLOT(readFile()));
+    connect(displayMenus, SIGNAL(clicked()), this, SLOT(readFile()));
+
+    QGridLayout *layout = new QGridLayout();
+    this->setLayout(layout);
+    layout->addWidget (displayHours, 1, 0);
+    layout->addWidget(displayMenus, 1, 1);
+    layout->addWidget (closeButton, 1, 2);
+    layout->addWidget (newText, 0, 0, 1, 3);
+
 }
 
 void location::readFile(){
@@ -48,34 +77,6 @@ void location::readFile(){
     newText->setHtml(line);
     newText->setReadOnly(true);
 }
-
-/*void location::readFile(){
-    if (!doc->open(QIODevice::ReadOnly | QIODevice::Text))
-        return;
-
-    QString line;
-    QStringList line_data;
-    QTextStream in(doc);
-    while (!in.atEnd()) {
-        QString line = in.readLine();
-        process_line(line);
-    }
-}
-
-void location::process_line(QString line){
-    static int row = 0;
-    QStringList ss = line.split('\t');
-    if(newTable->rowCount() < row + 1)
-        newTable->setRowCount(row + 1);
-    if(newTable->columnCount() < ss.size())
-        newTable->setColumnCount( ss.size() );
-
-    for(int column = 0; column < ss.size(); column++){
-        QTableWidgetItem *newItem = new QTableWidgetItem(ss.at(column));
-        newTable->setItem(row, column, newItem);
-    }
-    row++;
-}*/
 
 void location::closeWin(){
     newText->setReadOnly(false);

@@ -4,6 +4,8 @@
 #include <QWidget>
 #include <QFile>
 #include <QTextEdit>
+#include <QPushButton>
+
 namespace Ui {
     class location;
 }
@@ -18,12 +20,17 @@ public slots:
 public:
     explicit location(QWidget *parent = 0);
     explicit location(QFile &file, QWidget *parent = 0);
+    explicit location(QFile &file, QFile &file2, QWidget *parent = 0);
     ~location();
 
 protected:
     QTextEdit *newText = new QTextEdit();
     //QTableWidget *newTable = new QTableWidget();
     QFile *doc = new QFile();
+    QFile *doc2 = new QFile();
+    QPushButton *closeButton;
+    QPushButton *displayHours;
+    QPushButton *displayMenus;
     //void process_line(QString);
 
 private:

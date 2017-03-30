@@ -33,13 +33,13 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->setupUi(this);
     offen = new location(offenFile, this);
-    oaks = new location(this);
-    btsu = new location(this);
-    founders = new location(this);
-    olscamp = new location(this);
-    carillon = new location(this);
-    library = new location(this);
-    kreischer = new location(this);
+    oaks = new location(offenFile, offenFile, this);
+    btsu = new location(offenFile, this);
+    founders = new location(offenFile, this);
+    olscamp = new location(offenFile, this);
+    carillon = new location(offenFile, offenFile, this);
+    library = new location(offenFile, this);
+    kreischer = new location(offenFile, this);
 
     /**This block of code initializes the screen to be a fixed size. That way it cannont be moved.
     /  It loads the blank map image stored in resources and makes it the window background.
