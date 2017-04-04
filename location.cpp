@@ -87,6 +87,7 @@ void location::loadMenus(){
 
     parser p = new parser(doc);
 
+
     newText->setReadOnly(true);
 }
 
