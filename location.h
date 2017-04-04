@@ -15,7 +15,8 @@ class location : public QWidget{
 
 public slots:
     void closeWin();
-    void readFile();
+    void loadHours();
+    void loadMenus();
 
 public:
     explicit location(QWidget *parent = 0);
@@ -23,18 +24,15 @@ public:
     explicit location(QFile &file, QFile &file2, QWidget *parent = 0);
     ~location();
 
-protected:
+private:
+    Ui::location *ui;
     QTextEdit *newText = new QTextEdit();
-    //QTableWidget *newTable = new QTableWidget();
     QFile *doc = new QFile();
     QFile *doc2 = new QFile();
     QPushButton *closeButton;
     QPushButton *displayHours;
     QPushButton *displayMenus;
-    //void process_line(QString);
-
-private:
-    Ui::location *ui;
+    void process_line();
 };
 
 #endif // LOCATION_H

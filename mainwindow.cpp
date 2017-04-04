@@ -26,6 +26,7 @@
     QRect kreischerRect = QRect(1225, 475, 230, 150);
 
     QFile offenFile(":/myresources/offen.txt");
+    QFile menu(":/myresources/menu.csv");
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -33,11 +34,11 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->setupUi(this);
     offen = new location(offenFile, this);
-    oaks = new location(offenFile, offenFile, this);
+    oaks = new location(offenFile, menu, this);
     btsu = new location(offenFile, this);
     founders = new location(offenFile, this);
     olscamp = new location(offenFile, this);
-    carillon = new location(offenFile, offenFile, this);
+    carillon = new location(offenFile, menu, this);
     library = new location(offenFile, this);
     kreischer = new location(offenFile, this);
 

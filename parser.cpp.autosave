@@ -1,0 +1,25 @@
+#include "parser.h"
+#include <QCoreApplication>
+#include <QFile>
+#include <QTextStream>
+#include <QByteArray>
+
+parser :: parser(){
+
+}
+
+QString parser::loadFile(){
+    if (!doc->open(QIODevice::ReadOnly | QIODevice::Text)) {
+       return NULL;
+    }
+   
+    QByteArray total;
+    QByteArray line;
+    while (!doc->atEnd()) {
+       line = file.read(1024);
+       total.append(line);
+    }
+   
+    return QString(total);
+}
+

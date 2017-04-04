@@ -25,10 +25,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    location.cpp
+    location.cpp \
+    parser.cpp
 
 HEADERS  += mainwindow.h \
-    location.h
+    location.h \
+    parser.h
 
 FORMS    += mainwindow.ui \
     location.ui

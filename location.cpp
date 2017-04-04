@@ -1,12 +1,14 @@
 #include "location.h"
 #include "ui_location.h"
+#include "parser.h"
 #include <QCoreApplication>
 #include <QPushButton>
 #include <QFile>
 #include <QGridLayout>
 #include <QObject>
-#include <QStringList>
 #include <QTextStream>
+#include <QStringList>
+#include <QByteArray>
 
 location::location(QWidget *parent):QWidget(parent),
     ui(new Ui::location){
@@ -30,7 +32,7 @@ location::location(QFile &file, QWidget *parent):QWidget(parent),
     displayHours = new QPushButton("&Location Hours", this);
 
     connect(closeButton, SIGNAL(clicked()), this, SLOT(closeWin()));
-    connect(displayHours, SIGNAL(clicked()), this, SLOT(readFile()));
+    connect(displayHours, SIGNAL(clicked()), this, SLOT(loadHours()));
 
      QGridLayout *layout = new QGridLayout();
      this->setLayout(layout);
@@ -55,8 +57,8 @@ location::location(QFile &file, QFile &file2, QWidget *parent):QWidget(parent),
     displayMenus = new QPushButton("&Location Menus", this);
 
     connect(closeButton, SIGNAL(clicked()), this, SLOT(closeWin()));
-    connect(displayHours, SIGNAL(clicked()), this, SLOT(readFile()));
-    connect(displayMenus, SIGNAL(clicked()), this, SLOT(readFile()));
+    connect(displayHours, SIGNAL(clicked()), this, SLOT(loadHours()));
+    connect(displayMenus, SIGNAL(clicked()), this, SLOT(loadMenus()));
 
     QGridLayout *layout = new QGridLayout();
     this->setLayout(layout);
@@ -67,8 +69,9 @@ location::location(QFile &file, QFile &file2, QWidget *parent):QWidget(parent),
 
 }
 
-void location::readFile(){
+void location::loadHours(){
     newText->setReadOnly(false);
+    newText->clear();
     doc->open((QIODevice::ReadOnly | QIODevice::Text));
     QTextStream in(doc);
     QString line = in.readAll();
@@ -76,6 +79,20 @@ void location::readFile(){
 
     newText->setHtml(line);
     newText->setReadOnly(true);
+}
+
+void location::loadMenus(){
+    newText->setReadOnly(false);
+    newText->clear();
+
+    parser p = new parser(doc);
+
+    newText->setReadOnly(true);
+}
+
+void location::process_line(){
+    QByteArray line = doc2->readLine();
+    newText->append(line.split('\n').first());
 }
 
 void location::closeWin(){

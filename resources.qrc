@@ -10,5 +10,6 @@
         <file alias="offenhauer.jpg">images/bgMapOffenhauer.jpg</file>
         <file alias="olscamp.jpg">images/bgMapOlscamp.jpg</file>
 	<file alias="offen.txt">files/offen.txt</file>
+	<file alias="menu.csv">files/menu.csv</file>
     </qresource>
 </RCC>
