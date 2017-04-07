@@ -21,7 +21,8 @@ public slots:
 public:
     explicit location(QWidget *parent = 0);
     explicit location(QFile &file, QWidget *parent = 0);
-    explicit location(QFile &file, QFile &file2, QWidget *parent = 0);
+    explicit location(QString place, QFile &file, QFile &file2, QWidget *parent = 0);
+    void process_line();
     ~location();
 
 private:
@@ -29,10 +30,10 @@ private:
     QTextEdit *newText = new QTextEdit();
     QFile *doc = new QFile();
     QFile *doc2 = new QFile();
+    QString local;
     QPushButton *closeButton;
     QPushButton *displayHours;
     QPushButton *displayMenus;
-    void process_line();
 };
 
 #endif // LOCATION_H

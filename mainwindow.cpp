@@ -34,11 +34,11 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->setupUi(this);
     offen = new location(offenFile, this);
-    oaks = new location(offenFile, menu, this);
+    oaks = new location("The Oaks Dining Center", offenFile, menu, this);
     btsu = new location(offenFile, this);
     founders = new location(offenFile, this);
     olscamp = new location(offenFile, this);
-    carillon = new location(offenFile, menu, this);
+    carillon = new location("Carillon Place Dining Center", offenFile, menu, this);
     library = new location(offenFile, this);
     kreischer = new location(offenFile, this);
 

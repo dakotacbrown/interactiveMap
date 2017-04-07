@@ -41,7 +41,7 @@ location::location(QFile &file, QWidget *parent):QWidget(parent),
      layout->addWidget (newText, 0, 0, 1, 2);
 }
 
-location::location(QFile &file, QFile &file2, QWidget *parent):QWidget(parent),
+location::location(QString place, QFile &file, QFile &file2, QWidget *parent):QWidget(parent),
     ui(new Ui::location){
     ui->setupUi(this);
     this->setWindowFlags(Qt::CustomizeWindowHint | Qt::Window);
@@ -49,6 +49,7 @@ location::location(QFile &file, QFile &file2, QWidget *parent):QWidget(parent),
 
     doc = &file;
     doc2 = &file2;
+    local = place;
 
     newText->setReadOnly(true);
 
@@ -85,15 +86,12 @@ void location::loadMenus(){
     newText->setReadOnly(false);
     newText->clear();
 
-    parser p = new parser(doc);
+    parser p(doc2, local);
+    QString string = p.loadFile();
+    newText->append(string);
 
 
     newText->setReadOnly(true);
-}
-
-void location::process_line(){
-    QByteArray line = doc2->readLine();
-    newText->append(line.split('\n').first());
 }
 
 void location::closeWin(){
