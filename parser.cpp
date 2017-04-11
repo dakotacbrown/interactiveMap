@@ -35,10 +35,13 @@ QString parser::loadFile(){
 
     QString time = QTime::currentTime().toString("h:mm AP");
 
-    if()
-
     for(int i = 1; i < startDate.size(); i++){
-        processed.append(time + " " + beginTime.at(i) + " " + endTime.at(i) + "\n");
+        QTime begin = QTime::fromString(beginTime.at(i), "h:mm AP");
+        QTime current = QTime::fromString(time, "h:mm AP");;
+        QTime end = QTime::fromString(endTime.at(i), "h:mm AP");;
+        if(current >= begin && current <= end){
+            processed.append(beginTime.at(i) + " " + endTime.at(i) + " " + itemName.at(i) + " " + vegan.at(i) + " " + vegetarian.at(i) + " " + gluten.at(i) + " " + portion.at(i) + " " + kcal.at(i) + " " + fat.at(i) + " " + na.at(i) + " " + pro.at(i) + " " + carbs.at(i) + "\n");
+        }
     }
 
     return processed;
